@@ -1,0 +1,32 @@
+<!-- templates/seckill.html -->
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>秒杀商品</title>
+</head>
+<body>
+    <h1>秒杀商品列表</h1>
+
+    {% if products %}
+        {% for product in products %}
+            <div style="margin-bottom: 20px;">
+                <strong>{{ product.name }}</strong><br>
+                库存：{{ product.stock }}<br>
+                {% if product.is_on_sale %}
+                    <form method="post" action="{% url 'seckill' %}">
+                        {% csrf_token %}
+                        <input type="hidden" name="product_id" value="{{ product.id }}">
+                        <input type="hidden" name="username" value="测试用户">
+                        <button type="submit">立即秒杀</button>
+                    </form>
+                {% else %}
+                    <span style="color:red;">未开启秒杀</span>
+                {% endif %}
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>暂无商品</p>
+    {% endif %}
+</body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>庆祝大学毕业</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            text-align: center;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            max-width: 600px;
+            width: 100%;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        .balloons {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+        .balloon {
+            position: absolute;
+            width: 50px;
+            height: 80px;
+            background: #ff6b6b;
+            border-radius: 50% 50% 0 0;
+            animation: float 10s infinite ease-in-out;
+        }
+        .balloon::after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 25px;
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 20px solid #ff6b6b;
+        }
+        .balloon:nth-child(1) {
+            left: 10%;
+            animation-delay: 0s;
+        }
+        .balloon:nth-child(2) {
+            left: 20%;
+            animation-delay: 2s;
+        }
+        .balloon:nth-child(3) {
+            left: 30%;
+            animation-delay: 4s;
+        }
+        .balloon:nth-child(4) {
+            left: 40%;
+            animation-delay: 6s;
+        }
+        .balloon:nth-child(5) {
+            left: 50%;
+            animation-delay: 8s;
+        }
+        .balloon:nth-child(6) {
+            left: 60%;
+            animation-delay: 10s;
+        }
+        .balloon:nth-child(7) {
+            left: 70%;
+            animation-delay: 12s;
+        }
+        .balloon:nth-child(8) {
+            left: 80%;
+            animation-delay: 14s;
+        }
+        .balloon:nth-child(9) {
+            left: 90%;
+            animation-delay: 16s;
+        }
+        @keyframes float {
+            0% {
+                transform: translateY(0) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-200px) rotate(360deg);
+            }
+            100% {
+                transform: translateY(0) rotate(720deg);
+            }
+        }
+        .confetti {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+        .confetti-piece {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: #fff;
+            border-radius: 50%;
+            animation: confetti 10s infinite ease-in-out;
+        }
+        .confetti-piece:nth-child(1) {
+            left: 10%;
+            animation-delay: 0s;
+        }
+        .confetti-piece:nth-child(2) {
+            left: 20%;
+            animation-delay: 2s;
+        }
+        .confetti-piece:nth-child(3) {
+            left: 30%;
+            animation-delay: 4s;
+        }
+        .confetti-piece:nth-child(4) {
+            left: 40%;
+            animation-delay: 6s;
+        }
+        .confetti-piece:nth-child(5) {
+            left: 50%;
+            animation-delay: 8s;
+        }
+        .confetti-piece:nth-child(6) {
+            left: 60%;
+            animation-delay: 10s;
+        }
+        .confetti-piece:nth-child(7) {
+            left: 70%;
+            animation-delay: 12s;
+        }
+        .confetti-piece:nth-child(8) {
+            left: 80%;
+            animation-delay: 14s;
+        }
+        .confetti-piece:nth-child(9) {
+            left: 90%;
+            animation-delay: 16s;
+        }
+        @keyframes confetti {
+            0% {
+                transform: translateY(0) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-300px) rotate(360deg);
+            }
+            100% {
+                transform: translateY(0) rotate(720deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>热烈祝贺</h1>
+        <p>你已经成功完成了大学学业，迈向了新的旅程！</p>
+        <p>愿你在未来的日子里，前程似锦，梦想成真！</p>
+    </div>
+    <div class="balloons">
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+        <div class="balloon"></div>
+    </div>
+    <div class="confetti">
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+        <div class="confetti-piece"></div>
+    </div>
+</body>
+</html>
